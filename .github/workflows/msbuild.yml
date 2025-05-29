@@ -1,21 +1,20 @@
 name: build c++ project with MSBuild
 
 on:
-   push:
-      branches: [ main ]
-    pull_request:
-      branches: [ main ]
-  jobs:
-    build:
-       runs-on: windows-latest
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
 
-       steps:
-         - name: checkout code
-           uses: actions/checkout@v4
+jobs:
+  build:
+    runs-on: windows-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
 
-         - name: setup MSBuild
-           uses: microsoft/setup-msbuild@V2
+      - name: Setup MSBuild
+        uses: microsoft/setup-msbuild@v2
 
-         - name: build with MSBuild 
-           run:  msbuild YourProject.vcxproj/
-   p:configuration=release /p.Platform=x64
+      - name: Build with MSBuild
+        run: msbuild YourProject.vcxproj /p:Configuration=Release /p:Platform=x64
