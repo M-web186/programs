@@ -1,4 +1,4 @@
-# Program: Asterisk Triangle Output in C++
+# c++ program
 
 ## Overview
 
@@ -26,7 +26,7 @@ If the user enters 5, the output will be:
 
 ### Prerequisites
 
-- C++ compiler (e.g., `g++`, `clang++`)
+- C++ compiler 
 
 ### How to Run
 
